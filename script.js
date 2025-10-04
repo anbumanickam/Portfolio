@@ -162,3 +162,16 @@ window.addEventListener('focus', () => {
     isTabActive = true;
     document.title = originalTitle;
 });
+
+
+// Animate client logos on scroll
+const clientLogos = document.querySelectorAll('.client-logo');
+const logoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.3 });
+
+clientLogos.forEach(logo => logoObserver.observe(logo));
