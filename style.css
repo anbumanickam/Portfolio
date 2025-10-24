@@ -411,7 +411,7 @@ section {
 
 .project-image {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    height: 200px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -456,71 +456,110 @@ section {
     color: #2980b9;
 }
 
-/* Contact Section */
+/* Contact Section - Clean Redesign */
 .contact {
-    background: #f8f9fa;
+  padding: 30px 0;
+  background-color: var(--color-background);
 }
 
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+.contact-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.contact-content-simple {
-    display: flex;
-    justify-content: center;
+.contact-text {
+  margin-bottom: 40px;
 }
 
-.contact-info-centered {
-    text-align: center;
-    max-width: 600px;
+.contact-text h3 {
+  font-size: 28px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: 16px;
 }
 
-.contact-info h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
+.contact-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
 }
 
-.contact-info p {
-    color: #666;
-    margin-bottom: 2rem;
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
-.contact-details {
-    display: flex;
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 15px;
+}
+
+.contact-link:hover {
+  border-color: var(--color-primary);
+  background: var(--color-secondary);
+  transform: translateX(4px);
+}
+
+.contact-link i {
+  font-size: 18px;
+  color: var(--color-primary);
+  width: 20px;
+  text-align: center;
+}
+
+.contact-link span {
+  color: var(--color-text);
+}
+
+.contact-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .contact {
+    padding: 60px 0;
+  }
+  
+  .contact-text h3 {
+    font-size: 24px;
+  }
+  
+  .contact-text p {
+    font-size: 14px;
+  }
+  
+  .contact-link {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  
+  .contact-cta {
     flex-direction: column;
-    gap: 1rem;
+  }
+  
+  .contact-cta .btn {
+    width: 100%;
+  }
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.contact-item i {
-    color: #3498db;
-    font-size: 1.2rem;
-    width: 20px;
-}
-
-.contact-item a {
-    color: #2c3e50;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-    color: #3498db;
-}
-
-.contact-form {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
 
 .form-group {
     margin-bottom: 1.5rem;
@@ -547,7 +586,7 @@ section {
     background: #2c3e50;
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .footer-social {
@@ -892,7 +931,7 @@ section {
 
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
   align-items: center;
   justify-items: center;
@@ -906,7 +945,7 @@ section {
 }
 
 .client-logo img {
-  width: 100px;
+  width: 200px;
   height: auto;
   filter: grayscale(100%);
   transition: all 0.3s ease;
