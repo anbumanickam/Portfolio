@@ -51,9 +51,7 @@ body {
     gap: 0.8rem;
     
 }
-.nav-logo a {
-    text-decoration: none;
-}
+
 
 
 .nav-logo h2 i.fa-java {
@@ -972,4 +970,5 @@ section {
   opacity: 1;
   transform: scale(1);
 }
+
 
