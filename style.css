@@ -43,13 +43,18 @@ body {
     align-items: center;
 }
 
-.nav-logo h2 {
+.nav-logo h2  {
     color: #2c3e50;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    
 }
+.nav-logo a {
+    text-decoration: none;
+}
+
 
 .nav-logo h2 i.fa-java {
     color: #f89820;
@@ -59,6 +64,13 @@ body {
 .nav-logo h2 i.fa-leaf {
     color: #6db33f;
     font-size: 1.5rem;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .nav-menu {
@@ -960,3 +972,4 @@ section {
   opacity: 1;
   transform: scale(1);
 }
+
